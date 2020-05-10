@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACG</title>
+    <title>Linevn</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
     <div id="app">
-        <main>
-            <post-head></post-head>
+        <main class="timeline-post">
+            <post-head :is-active="isSchedule"></post-head>
             <publish-box></publish-box>
             <main-post></main-post>
         </main>
@@ -22,6 +23,11 @@
     <script>
         var app = new Vue({
             el: '#app',
+            data() {
+                return {
+                    isSchedule: 0,
+                }
+            },
             components: {
                 'main-post': httpVueLoader('vue_components/main-post.vue'),
                 'post-head': httpVueLoader('vue_components/post-head.vue'),
