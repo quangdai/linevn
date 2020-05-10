@@ -12,9 +12,17 @@
 <body>
     <div id="app">
         <main class="timeline-post">
+            <!-- post-head -->
             <post-head :is-active="isSchedule"></post-head>
+            <!-- publish-box -->
             <publish-box></publish-box>
+            <!-- main-post -->
             <main-post></main-post>
+            <div class="text-center">
+                <button class="btn-post" :disabled="isSchedule == 0">
+                    Schedule
+                </button>
+            </div>
         </main>
     </div>
 

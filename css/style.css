@@ -15247,10 +15247,10 @@ error 404
   padding: 45px 45px 100px;
 }
 
-.post-head .btn-gr .btn-schedule {
+.post-head .btn-gr .btn-schedule, .btn-post {
   background-color: #80dc80;
   color: #fff;
-  border-radius: 4px;
+  border-radius: 2px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -15258,7 +15258,7 @@ error 404
   transition: 0.3s all;
 }
 
-.post-head .btn-gr .btn-schedule:hover {
+.post-head .btn-gr .btn-schedule:hover, .btn-post:hover {
   -webkit-box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s all;
@@ -15280,9 +15280,9 @@ error 404
 
 .post-head .btn-gr .btn-draft {
   background-color: #cfd4da;
-  border-radius: 4px;
+  border-radius: 2px;
   font-size: 16px;
-  padding: 6px 27px;
+  padding: 6px 15px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -15373,5 +15373,39 @@ error 404
   border-radius: 2px;
   border: 1px solid #ced4da;
   margin-right: 10px;
+}
+
+.main-post {
+  margin-top: 20px;
+  border: 1px solid #cfd4da;
+}
+
+.main-post .tab-main-post {
+  background-color: #f7f7f7;
+  padding: 15px 20px;
+}
+
+.main-post .tab-main-post a {
+  color: #333;
+  width: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 3px;
+  margin-right: 1px;
+}
+
+.main-post .tab-main-post a:hover, .main-post .tab-main-post a .active {
+  background-color: #dae0e5;
+}
+
+.main-post .box-post-type {
+  padding: 20px;
+}
+
+.btn-post {
+  margin-top: 50px;
+  font-size: 18px;
+  padding: 10px 50px;
 }
 /*# sourceMappingURL=style.css.map */
