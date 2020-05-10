@@ -9,13 +9,11 @@
 </head>
 <body>
     <div id="app">
-        <myheader></myheader>
-    
         <main>
-    
+            <post-head></post-head>
+            <publish-box></publish-box>
+            <main-post></main-post>
         </main>
-    
-        <myfooter></myfooter>
     </div>
 
     <script src="js/vue.js"></script>
@@ -23,10 +21,11 @@
     
     <script>
         var app = new Vue({
-            el: '#contentall',
+            el: '#app',
             components: {
-                'myheader': httpVueLoader('header.vue'),
-                'myfooter': httpVueLoader('footer.vue'),
+                'main-post': httpVueLoader('vue_components/main-post.vue'),
+                'post-head': httpVueLoader('vue_components/post-head.vue'),
+                'publish-box': httpVueLoader('vue_components/publish-box.vue'),
             },
         });
     </script>
