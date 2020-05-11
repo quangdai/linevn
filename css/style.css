@@ -15393,6 +15393,46 @@ error 404
   text-align: center;
   border-radius: 3px;
   margin-right: 1px;
+  position: relative;
+}
+
+.main-post .tab-main-post a span {
+  position: absolute;
+  background-color: #4a4e53;
+  border-radius: 2px;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  -webkit-transform: translateX(-50%) scaleY(0);
+          transform: translateX(-50%) scaleY(0);
+  line-height: 10px;
+  color: #fff;
+  padding: 10px;
+  opacity: 0;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.main-post .tab-main-post a span::before {
+  content: '';
+  display: inline-block;
+  border-top: 4px solid #4a4e53;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.main-post .tab-main-post a:hover span {
+  -webkit-transform: translateX(-50%) scaleY(1);
+          transform: translateX(-50%) scaleY(1);
+  opacity: 1;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 
 .main-post .tab-main-post a:hover, .main-post .tab-main-post a .active {
