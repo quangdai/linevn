@@ -73,6 +73,7 @@
             selectCoupon(){
                 this.selected = true;
                 this.showPopup();
+                this.$emit('set-schedule2');
             }
         },
     };

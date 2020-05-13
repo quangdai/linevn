@@ -17,7 +17,7 @@
             <!-- publish-box -->
             <publish-box></publish-box>
             <!-- main-post -->
-            <main-post></main-post>
+            <main-post @set-schedule1="changeSchedule()"></main-post>
             <div class="text-center">
                 <button class="btn-post" :disabled="isSchedule == 0">
                     Schedule
@@ -35,6 +35,11 @@
             data() {
                 return {
                     isSchedule: 0,
+                }
+            },
+            methods: {
+                changeSchedule(){
+                    this.isSchedule = 1;
                 }
             },
             components: {
