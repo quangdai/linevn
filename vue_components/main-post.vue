@@ -42,7 +42,7 @@
             <coupon-post v-else-if="postType == 'Coupon'" 
             :is-title="'Coupon'" 
             :is-show="isShow" 
-            @set-schedule2="changeSchedule1()"
+            @set-schedule2="changeSchedule1($event);"
             @update-status="showPopup()">
             </coupon-post>
         </div>
@@ -56,7 +56,8 @@
         data: function() {
             return{
                 postType: 'IMAGE',
-                isShow: false
+                isShow: false,
+                aaa: 1
             }
         },
         methods: {
@@ -71,9 +72,9 @@
             showPopup(){
                 this.isShow = !this.isShow
             },
-            changeSchedule1(){
-                this.$emit('set-schedule1');
+            changeSchedule1(val){
+                this.$emit('set-schedule1', val);
             }
-        },
+        }
     };
 </script>
